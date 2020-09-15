@@ -81,7 +81,7 @@ static Key keys[] = {
 	{ 0,                            XF86XK_AudioRaiseVolume,spawn,SHCMD("pamixer -i 5; kill -44 $(pidof dwmblocks)") },
 	{ 0,                            XF86XK_AudioLowerVolume,spawn,SHCMD("pamixer -d 5; kill -44 $(pidof dwmblocks)") },
 	{ 0,                            XF86XK_AudioMute,spawn,    SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
-	{ MODKEY,                       XK_l,      spawn,          SHCMD("slock") },
+	{ MODKEY,                       XK_s,      spawn,          SHCMD("slock") },
 	{ MODKEY,                       XK_x,      spawn,          SHCMD("xkill") },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
