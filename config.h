@@ -69,7 +69,7 @@ static const char *termcmd[]  = { "st", NULL };
 /* Mod4Mask is used for launching programs, MODKEY is used for dwm functions */
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_F1,     spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ Mod4Mask,                     XK_f,      spawn,          SHCMD("firefox") },
 	{ Mod4Mask,                     XK_p,      spawn,          SHCMD("st -c pulsemixer pulsemixer") },
