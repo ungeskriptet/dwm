@@ -72,7 +72,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ Mod4Mask,                     XK_f,      spawn,          SHCMD("firefox") },
 	{ Mod4Mask,                     XK_p,      spawn,          SHCMD("st -c center pulsemixer") },
-	{ Mod4Mask,                     XK_n,      spawn,          SHCMD("st -c center sudo wifi-menu") },
+	{ Mod4Mask,                     XK_n,      spawn,          SHCMD("st -c center sudo wifi-menu -o") },
 	{ Mod4Mask,                     XK_e,      spawn,          SHCMD("st ranger") },
         { Mod4Mask,                     XK_Print,  spawn,          SHCMD("maim ~/Pictures/screenshot_$(date +%F_%H:%M:%S).png && notify-send \"Screenshot taken under ~/Pictures.\"") },
 	{ Mod4Mask|ShiftMask,           XK_Print,  spawn,          SHCMD("maim -s ~/Pictures/screenshot-cropped_$(date +%F_%H:%M:%S).png && notify-send \"Cropped screenshot taken under ~/Pictures.\"") },
