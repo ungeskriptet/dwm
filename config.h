@@ -34,8 +34,7 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     iscentered   isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            0,           1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           0,           -1 },
-	{ "pulsemixer",NULL,      NULL,       0,            1,           1,           -1 },
-	{ "nmtui"    ,NULL,      NULL,       0,            1,           1,           -1 },
+	{ "center",   NULL,       NULL,       0,            1,           1,           -1 },
 };
 
 /* layout(s) */
@@ -72,8 +71,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ Mod4Mask,                     XK_f,      spawn,          SHCMD("firefox") },
-	{ Mod4Mask,                     XK_p,      spawn,          SHCMD("st -c pulsemixer pulsemixer") },
-	{ Mod4Mask,                     XK_n,      spawn,          SHCMD("st -c nmtui nmtui") },
+	{ Mod4Mask,                     XK_p,      spawn,          SHCMD("st -c center pulsemixer") },
+	{ Mod4Mask,                     XK_n,      spawn,          SHCMD("st -c center sudo wifi-menu") },
 	{ Mod4Mask,                     XK_e,      spawn,          SHCMD("st ranger") },
         { Mod4Mask,                     XK_Print,  spawn,          SHCMD("maim ~/Pictures/screenshot_$(date +%F_%H:%M:%S).png && notify-send \"Screenshot taken under ~/Pictures.\"") },
 	{ Mod4Mask|ShiftMask,           XK_Print,  spawn,          SHCMD("maim -s ~/Pictures/screenshot-cropped_$(date +%F_%H:%M:%S).png && notify-send \"Cropped screenshot taken under ~/Pictures.\"") },
@@ -84,7 +83,6 @@ static Key keys[] = {
 	{ 0,                            XF86XK_AudioMute,spawn,    SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY,                       XK_s,      spawn,          SHCMD("slock") },
 	{ MODKEY,                       XK_x,      spawn,          SHCMD("xkill") },
-	{ Mod4Mask,                     XK_d,      spawn,          SHCMD("discord & which fetchcord && fetchcord") },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
