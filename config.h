@@ -84,7 +84,7 @@ static Key keys[] = {
 	{ 0,                            XF86XK_AudioMute,spawn,    SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY,                       XK_s,      spawn,          SHCMD("slock") },
 	{ MODKEY,                       XK_x,      spawn,          SHCMD("xkill") },
-	{ Mod4Mask,                     XK_d,      spawn,          SHCMD("discord & which fetchcord && fetchcord") },
+	{ Mod4Mask,                     XK_d,      spawn,          SHCMD("discord & which fetchcord && sleep 10; fetchcord --terminal 'st'") },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
